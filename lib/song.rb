@@ -1,12 +1,11 @@
 class Song
 
-  #extend Concerns::Findable
-
-  attr_accessor :name
+  extend Concerns::Findable
+  attr_accessor :name, :artist, :genre, :musicimporter, :musiclibrarycontroller
 
   @@all = [] #this is a collection of all of the songs
 
-  def initialize(name,artist=nil,genre=nil)
+  def initialize(name, artist=nil, genre=nil)
     @name = name
     self.artist = artist if artist
     self.genre = genre if genre
